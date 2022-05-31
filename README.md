@@ -1,1 +1,1 @@
-# -smile-messaging-go
+# smile-messaging-go
