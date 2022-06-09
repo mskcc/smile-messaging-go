@@ -1,8 +1,6 @@
-module github.com/smile_messaging_go
+module github.com/mskcc/smile_messaging_go
 
 go 1.17
-
-replace github.com/mskcc/smile_messaging_go => ../../cmo/n1zea_smile_messaging_go
 
 require (
 	github.com/mskcc/smile_messaging_go v0.0.0-00010101000000-000000000000
