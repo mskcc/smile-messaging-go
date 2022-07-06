@@ -1,7 +1,7 @@
 package nats
 
 import (
-	smsg "github.com/mskcc/smile_messaging_go"
+	smsg "github.com/mskcc/smile-messaging-go/messaging"
 	"github.com/nats-io/nats.go"
 )
 
