@@ -1,4 +1,4 @@
-package messaging
+package smile-messaging-go
 
 // The type passed into a message handler
 // to the Subscribe routine when a message is
