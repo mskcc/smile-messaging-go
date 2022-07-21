@@ -42,8 +42,8 @@ func NewMessaging(url string, opts ...Option) (*Messaging, error) {
 }
 
 func (m *Messaging) Publish(subj string, data []byte) error {
-	msg := &nats.Msg{Subject: subj, Data: data}
-	msg.Header = make(map[string][]string)
+	msg := nats.NewMsg(subj)
+	msg.Data = data
 	msg.Header.Add("Nats-Msg-Subject", subj)
 
 	_, err := m.js.PublishMsg(msg)
