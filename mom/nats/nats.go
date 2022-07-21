@@ -42,7 +42,10 @@ func NewMessaging(url string, opts ...Option) (*Messaging, error) {
 }
 
 func (m *Messaging) Publish(subj string, data []byte) error {
-	_, err := m.js.Publish(subj, data)
+	msg := &nats.Msg{Subject: subj, Data: data}
+	msg.Header.Add("Nats-Msg-Subject", subj)
+
+	_, err := m.js.PublishMsg(msg)
 	if err != nil {
 		return err
 	}
